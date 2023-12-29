@@ -1,0 +1,40 @@
+package day4;
+
+public class Sorting_Algorithm {
+
+	int[] bubble_sort(int a[]) 
+	{
+		int n=a.length;
+		for(int i=0;i<n-1;i++)
+		{
+			for(int j=0;j<n-1;j++)
+			{
+				if(a[j]>a[j+1])
+				{
+					int temp=a[j];
+					a[j]=a[j+1];
+					a[j+1]=temp;
+				}
+			}
+		}
+		return a;
+		
+	}
+	void print_array(int a[])
+	{
+		for(int i=0;i<a.length;i++)
+			System.out.print(a[i]+"->");
+		
+	}
+	public static void main(String[] args) {
+		
+   int a[]= {66,11,33,99,88,22,44,55,77};
+   Sorting_Algorithm obj=new Sorting_Algorithm();
+  // obj.print_array(a);
+   
+   obj.print_array( obj.bubble_sort(a));
+	
+	
+	}
+
+}
